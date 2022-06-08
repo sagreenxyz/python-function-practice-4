@@ -40,6 +40,16 @@ def rev_string(str_input):
 
 print(rev_string("This is my test string."))
 
+# https://www.geeksforgeeks.org/reverse-string-python-5-different-ways/ is my reference for the recursive method shown below in rev_string2
+
+def rev_string2(str_input):
+    if len(str_input) == 0:
+        return str_input
+    else:
+        return rev_string2(str_input[1:]) + str_input[0]
+
+print(rev_string2("This is my test string."))
+
 def num_within(num, begin, end):
     return_value = False
     for i in range(begin, end + 1):
